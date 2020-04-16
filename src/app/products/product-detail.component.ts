@@ -22,15 +22,15 @@ export class ProductDetailComponent implements OnInit {
     const param = this.route.snapshot.paramMap.get('id');
     if (param) {
       const id = +param;
-      this.getProduct(id);
+      //this.getProduct(id);
     }
   }
 
   getProduct(id: number) {
-    this.productService.getProduct(id).subscribe({
-      next: product => this.product = product,
-      error: err => this.errorMessage = err
-    });
+    // this.productService.getProduct(id).subscribe({
+    //   next: product => this.product = product,
+    //   error: err => this.errorMessage = err
+    // });
   }
 
   onBack(): void {
