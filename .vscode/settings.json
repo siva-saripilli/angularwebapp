@@ -1,0 +1,6 @@
+{
+  "files.autoSave": "afterDelay",
+  "html.format.wrapAttributes": "force-aligned",
+  "appService.defaultWebAppToDeploy": "/subscriptions/e7d7a17c-eb78-4799-8327-ff9ab7c9875e/resourceGroups/siva_rg/providers/Microsoft.Web/sites/ngrwebapp",
+  "appService.deploySubpath": "dist"
+}
