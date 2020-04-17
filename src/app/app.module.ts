@@ -26,7 +26,10 @@ declare var gtag;
     ]),
     ProductModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    {provide: 'googleTagManagerId', useValue: 'GTM-N9VTKV5'}
+  ]
 })
 export class AppModule { 
   title = 'analytics';

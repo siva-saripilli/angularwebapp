@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { IProduct } from './product';
 import { ProductService } from './product.service';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 
 @Component({
   templateUrl: './product-list.component.html',
@@ -26,8 +27,8 @@ export class ProductListComponent implements OnInit {
   filteredProducts: IProduct[] = [];
   products: IProduct[] = [];
 
-  constructor(private productService: ProductService) {
-
+  constructor(private productService: ProductService, private gtmService: GoogleTagManagerService) {
+    
   }
 
   onRatingClicked(message: string): void {
@@ -42,6 +43,13 @@ export class ProductListComponent implements OnInit {
 
   toggleImage(): void {
     this.showImage = !this.showImage;
+
+    // push GTM with a custom event
+    const gtmTag = {
+      event: 'product-button-click',
+      data: 'my-custom-event',
+    };
+    this.gtmService.pushTag(gtmTag);
   }
 
   ngOnInit(): void {

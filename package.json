@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~8.1.2",
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
+    "angular-google-tag-manager": "^1.1.1",
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
     "node": "^12.13.0",
