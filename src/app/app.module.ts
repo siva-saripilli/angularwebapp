@@ -38,7 +38,7 @@ export class AppModule {
       filter(event => event instanceof NavigationEnd),
     );
     navEndEvents.subscribe((event: NavigationEnd) =>{
-      gtag('config', 'UA-163699065-1', {
+      gtag('config', 'UA-164007327-1', {
         'page_path': event.urlAfterRedirects
       });
     });
