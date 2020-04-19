@@ -46,7 +46,7 @@ export class ProductListComponent implements OnInit {
 
     // push GTM with a custom event
     const gtmTag = {
-      event: 'product-button-click',
+      event: 'gtm.click',
       data: 'my-custom-event',
     };
     this.gtmService.pushTag(gtmTag);
