@@ -8,20 +8,23 @@ import { WelcomeComponent } from './home/welcome.component';
 import { ProductModule } from './products/product.module';
 import { filter } from 'rxjs/operators';
 import { getHtmlTagDefinition } from '@angular/compiler';
+import { ProductCreateFormComponent } from './product-create-form/product-create-form.component';
 
 declare var gtag;
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ProductCreateFormComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
-      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+      { path: 'productcreate', component: ProductCreateFormComponent },
+      { path: '', redirectTo: 'welcome', pathMatch: 'full' },      
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]),
     ProductModule
